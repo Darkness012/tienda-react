@@ -8,7 +8,7 @@ class  UsersAdmin{
     validateLogin(user){
         return new Promise((resolve, reject)=>{
             request
-                .post(this.urlBase+"signup")
+                .post(this.urlBase+"login")
                 .send(user)
                 .withCredentials()
                 .then(res=>{
@@ -23,7 +23,7 @@ class  UsersAdmin{
     validateRegister(user){
         return new Promise((resolve, reject)=>{
             request
-                .post(this.urlBase+"create-account")
+                .post(this.urlBase+"register")
                 .send(user)
                 .withCredentials()
                 .then(res=>{
